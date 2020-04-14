@@ -126,7 +126,7 @@ function motivation( firstname, lastname ) {
   var welcomeText = "You're doing awesome, keep it up";
 
   function message(){
-    return welcomeText+' '+firstname+' '+lastname+'.'
+    return welcomeText+' '+firstname+' '+lastname+
   }
 
   //Uncommment this to return the value of your message function
@@ -158,7 +158,7 @@ var module = (function() {
   // Anything that is being returned is made public and can be invoked from
   // outside our lexical scope
   return {
-    publicMethod: () => {return privateMethod()}
+    
   };
 })();
 
@@ -177,13 +177,7 @@ function secretNumber() {
   var secret = 143;
 
   return {
-    addToSecret: function(param) {
-      return secret += param
-    },
-    takeAwayFromSecret: function(param) {
-      secret -= param
-      return secret
-    }
+    // Code here
   };
 }
 
@@ -207,15 +201,11 @@ function secretNumber() {
   Fix the code below to log the desired output.
 */
 
-function timeOutCounter(){
-  for (var i = 0; i <= 5; i++){
-    function inner(j){
-      setTimeout(function() {
-      console.log(j)
-    }, j * 1000)
+function timeOutCounter() {
+  for (var i = 0; i <= 5; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 1000);
   }
-  inner(i)
-    }
 }
-
-timeOutCounter()
+timeOutCounter();

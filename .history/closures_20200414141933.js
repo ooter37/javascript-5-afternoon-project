@@ -92,25 +92,23 @@ function makeCounter() {
 */
 
 function counterFactory(value) {
-  let num = value
+  // Code here.
 
   return {
     inc: function() {
-      num++
-      return num
+      value++
     },
     dec: function() {
-      num--
-      return num
+      value--
     }
   };
 }
 
 counter = counterFactory(10);
-counter.inc() // 11
-counter.inc() // 12
-counter.inc() // 13
-counter.dec() // 12
+// counter.inc() // 11
+// counter.inc() // 12
+// counter.inc() // 13
+// counter.dec() // 12
 
 
 
@@ -125,12 +123,10 @@ counter.dec() // 12
 function motivation( firstname, lastname ) {
   var welcomeText = "You're doing awesome, keep it up";
 
-  function message(){
-    return welcomeText+' '+firstname+' '+lastname+'.'
-  }
+  // code message function here.
 
   //Uncommment this to return the value of your message function
-  return message;
+  //return message;
 }
 
 var greeting = motivation('Billy', 'Bob'); // 'You're doing awesome keep it up Billy Bob.
@@ -158,7 +154,7 @@ var module = (function() {
   // Anything that is being returned is made public and can be invoked from
   // outside our lexical scope
   return {
-    publicMethod: () => {return privateMethod()}
+    // Code here.
   };
 })();
 
@@ -177,13 +173,7 @@ function secretNumber() {
   var secret = 143;
 
   return {
-    addToSecret: function(param) {
-      return secret += param
-    },
-    takeAwayFromSecret: function(param) {
-      secret -= param
-      return secret
-    }
+    // Code here
   };
 }
 
@@ -207,15 +197,11 @@ function secretNumber() {
   Fix the code below to log the desired output.
 */
 
-function timeOutCounter(){
-  for (var i = 0; i <= 5; i++){
-    function inner(j){
-      setTimeout(function() {
-      console.log(j)
-    }, j * 1000)
+function timeOutCounter() {
+  for (var i = 0; i <= 5; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 1000);
   }
-  inner(i)
-    }
 }
-
-timeOutCounter()
+timeOutCounter();

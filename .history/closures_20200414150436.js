@@ -178,10 +178,11 @@ function secretNumber() {
 
   return {
     addToSecret: function(param) {
-      return secret += param
+      secret + param
+      return secret
     },
     takeAwayFromSecret: function(param) {
-      secret -= param
+      secret - param
       return secret
     }
   };
@@ -207,15 +208,11 @@ function secretNumber() {
   Fix the code below to log the desired output.
 */
 
-function timeOutCounter(){
-  for (var i = 0; i <= 5; i++){
-    function inner(j){
-      setTimeout(function() {
-      console.log(j)
-    }, j * 1000)
+function timeOutCounter() {
+  for (var i = 0; i <= 5; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 1000);
   }
-  inner(i)
-    }
 }
-
-timeOutCounter()
+timeOutCounter();
